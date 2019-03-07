@@ -1,10 +1,9 @@
-// import { memoize } from './lib/memory-cache';
-import { memoize } from './lib/redis-cache';
+import { memoize } from './redis-cache';
 
-export async function serviceA(url) {
+export async function serviceA({ a }) {
   return new Promise(resolve => {
     setTimeout(() => {
-      resolve({ now: Date.now() });
+      resolve({ a, now: Date.now() });
     }, 0);
   });
 }
@@ -14,9 +13,9 @@ describe('When calling api', () => {
     // this can be changed to take in params such as to expire etc.
     const memoizedApi: any = memoize(serviceA);
 
-    const result1 = await memoizedApi('xxx');
-    const result2 = await memoizedApi('xxx');
-    const result3 = await memoizedApi('zzz');
+    const result1 = await memoizedApi({ a: 1 });
+    const result2 = await memoizedApi({ a: 1 });
+    const result3 = await memoizedApi({ a: 2 });
     expect(result1).toEqual(result2);
     expect(result2).not.toEqual(result3);
   });
