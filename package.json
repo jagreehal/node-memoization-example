@@ -1,0 +1,58 @@
+{
+  "name": "node-memoization-example",
+  "version": "1.0.0",
+  "description": "example of memoization of api calls",
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch"
+  },
+  "author": "Jag Reehal",
+  "license": "ISC",
+  "dependencies": {
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.9",
+    "@types/node": "^11.10.5",
+    "@types/prettier": "^1.16.1",
+    "@types/redis": "^2.8.10",
+    "@types/redis-mock": "^0.17.0",
+    "@types/source-map-support": "^0.5.0",
+    "jest": "^24.3.0",
+    "prettier": "^1.16.4",
+    "redis-mock": "^0.43.0",
+    "ts-jest": "24.0.0",
+    "ts-node": "8.0.3",
+    "tslint": "^5.13.1",
+    "tslint-config-airbnb": "5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.3.3333"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testMatch": [
+      "**/*.spec.(ts|tsx)"
+    ],
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "node_modules/",
+      "dist"
+    ],
+    "coveragePathIgnorePatterns": [
+      "node_modules/",
+      "dist",
+      "**/*.spec.(ts|tsx)"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "html"
+    ]
+  }
+}

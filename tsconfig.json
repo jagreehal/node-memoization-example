@@ -1,0 +1,19 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {        
+        "moduleResolution": "node",
+        "jsx": "react",
+        "target": "es2017",
+        "module": "commonjs",
+        "lib": ["es6", "dom"],
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "outDir": "dist",
+            "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true    
+    },
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
