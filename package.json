@@ -12,21 +12,21 @@
     "redis": "^2.8.0"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.9",
-    "@types/node": "^11.10.5",
-    "@types/prettier": "^1.16.1",
-    "@types/redis": "^2.8.10",
+    "@types/jest": "^24.0.21",
+    "@types/node": "^12.12.5",
+    "@types/prettier": "^1.18.3",
+    "@types/redis": "^2.8.14",
     "@types/redis-mock": "^0.17.0",
     "@types/source-map-support": "^0.5.0",
-    "jest": "^23.6.0",
-    "prettier": "^1.16.4",
-    "redis-mock": "^0.43.0",
-    "ts-jest": "24.0.0",
-    "ts-node": "8.0.3",
-    "tslint": "^5.13.1",
-    "tslint-config-airbnb": "5.11.1",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "redis-mock": "^0.46.0",
+    "ts-jest": "24.1.0",
+    "ts-node": "8.4.1",
+    "tslint": "^5.20.0",
+    "tslint-config-airbnb": "5.11.2",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.3.3333"
+    "typescript": "^3.6.4"
   },
   "jest": {
     "moduleFileExtensions": [
