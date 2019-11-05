@@ -18,4 +18,13 @@ describe('When calling api', () => {
     expect(result1).toEqual(result2);
     expect(result2).not.toEqual(result3);
   });
+  it('Should be able to memoize results using prefix', async () => {
+    const memoizedApi: any = memoize(serviceA, { prefix: 'foo' });
+
+    const result1 = await memoizedApi({ a: 1 });
+    const result2 = await memoizedApi({ a: 1 });
+    const result3 = await memoizedApi({ a: 2 });
+    expect(result1).toEqual(result2);
+    expect(result2).not.toEqual(result3);
+  });
 });

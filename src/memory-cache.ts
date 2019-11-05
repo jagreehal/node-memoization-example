@@ -1,9 +1,14 @@
-export function memoize(fn) {
+interface MemoizeOptions {
+  prefix?: string;
+}
+
+export function memoize(fn, o?: MemoizeOptions) {
   const cache = {};
 
   return async function(...params: any) {
     const args = JSON.stringify(params);
-    cache[args] = cache[args] || (await fn(params));
-    return cache[args];
+    const cacheKey = `${o ? o.prefix : ''}:[${args}]`;
+    cache[cacheKey] = cache[cacheKey] || (await fn(...params));
+    return cache[cacheKey];
   };
 }
